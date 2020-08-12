@@ -326,7 +326,6 @@ const tripEvents = pageMainElement.querySelector(`.trip-events`);
 const sortContaner = pageMainElement.querySelector(`.sort-contaner`);
 const newFormContaner = pageMainElement.querySelector(`.new-form-contaner`);
 
-
 render(tripInfoElement, createTripInformationTemplate(), `afterbegin`);
 render(tripInfoElement, createCostInformationTemplate(), `beforeend`);
 render(menuContaner, createMenuTemplate(), `afterbegin`);
@@ -336,10 +335,10 @@ render(sortContaner, createSortTemplate(), `afterbegin`);
 render(newFormContaner, createNewEventTemplate(), `afterbegin`);
 render(tripEvents, createDayListTemplate(), `beforeend`);
 
-const  dayInfo = tripEvents.querySelector(`.trip-days`);
-render(dayInfo , createDayTemplate(), `beforeend`);
+const dayInfo = tripEvents.querySelector(`.trip-days`);
+render(dayInfo, createDayTemplate(), `beforeend`);
 
-const  pointInfo = tripEvents.querySelector(`.trip-events__list`);
+const pointInfo = tripEvents.querySelector(`.trip-events__list`);
 for (let i = 0; i < EVENT_COUNT; i++) {
   render(pointInfo, createEventInfoTemplate(), `beforeend`);
 }
